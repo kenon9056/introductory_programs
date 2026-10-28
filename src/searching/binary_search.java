@@ -1,4 +1,7 @@
 import java.util.*;
+
+import static sorting.bubble_insertion_selection.bubblesort;
+
 public static void main()
 {
     Scanner sc=new Scanner(System.in);
@@ -9,7 +12,7 @@ public static void main()
     {
         arr[i]=(int)(10*Math.random());
     }
-    arr=bubblesort(arr);
+    arr=bubblesort(arr,1);
     for(int i=0;i<arr.length;i++)
     {
         System.out.print(arr[i]+",");
