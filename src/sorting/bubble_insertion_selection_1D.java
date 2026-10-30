@@ -51,8 +51,8 @@ public class bubble_insertion_selection_1D
     {
         arr = bubblesort(arr,order);
         System.out.println("the sorted array is");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
     }
     else if(choice==2)
@@ -64,18 +64,16 @@ public class bubble_insertion_selection_1D
             System.out.print(arr[i] + " ");
         }
     }
-    else if(choice==3)
-
-    {
+    else {
         arr = insertionsort(arr,order);
         System.out.println("the sorted array is");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
     }
 }
 
-    public static int[] bubblesort(int arr[], int order) //take the largest element and push  it to the end every time;
+    public static int[] bubblesort(int[] arr, int order) //take the largest element and push  it to the end every time;
     {
         int temp=0;
         if(order==1)
@@ -111,7 +109,7 @@ public class bubble_insertion_selection_1D
             return arr;
         }
     }
-    public static int[] selectionsort(int arr[], int order)//finds smallest element and tranfers it to first position
+    public static int[] selectionsort(int[] arr, int order)//finds smallest element and tranfers it to first position
     {
         if(order==1)
         {
@@ -150,7 +148,7 @@ public class bubble_insertion_selection_1D
             return arr;
         }
     }
-    public static int[] insertionsort(int arr[], int order)
+    public static int[] insertionsort(int[] arr, int order)
     {
         if(order==1)
         {

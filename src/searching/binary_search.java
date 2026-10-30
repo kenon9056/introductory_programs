@@ -13,9 +13,8 @@ public static void main()
         arr[i]=(int)(10*Math.random());
     }
     arr=bubblesort(arr,1);
-    for(int i=0;i<arr.length;i++)
-    {
-        System.out.print(arr[i]+",");
+    for (int j : arr) {
+        System.out.print(j + ",");
     }
     System.out.println(" ");
     System.out.println("enter the element to be searched");

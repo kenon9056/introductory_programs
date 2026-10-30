@@ -11,7 +11,6 @@ public class Way_To_Long_Words {
             {
                 arr[i]=sc.next();
             }
-            int k=0;
             for(int i=0;i<n;i++)
             {
                 if(arr[i].isEmpty() ||arr[i].length()>100)
