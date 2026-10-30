@@ -24,7 +24,10 @@ public class Way_To_Long_Words {
                 {
                     System.out.println(arr[i].charAt(0)+(arr[i].length()-2)+arr[i].charAt(arr[i].length()-1));
                 }
-                System.out.println(arr[i]);
+                else
+                {
+                    System.out.println(arr[i]);
+                }
             }
         }
         else
