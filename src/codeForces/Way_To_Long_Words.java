@@ -1,7 +1,7 @@
 package codeForces;
 import java.util.*;
 public class Way_To_Long_Words {
-    public static void main() {
+    public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         if(n<=100 && n>=1)
@@ -22,7 +22,7 @@ public class Way_To_Long_Words {
             {
                 if(arr[i].length()>10)
                 {
-                    System.out.println(arr[i].charAt(0)+(arr[i].length()-2)+arr[i].charAt(arr[i].length()-1));
+                    System.out.println(""+(arr[i].charAt(0))+(arr[i].length()-2)+(arr[i].charAt(arr[i].length()-1)));
                 }
                 else
                 {
