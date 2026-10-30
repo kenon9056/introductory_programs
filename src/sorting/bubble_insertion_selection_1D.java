@@ -1,6 +1,6 @@
 package sorting;
 import java.util.*;
-public class bubble_insertion_selection
+public class bubble_insertion_selection_1D
 {
     public static void main()
 
