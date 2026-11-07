@@ -1,6 +1,6 @@
 import java.util.*;
 
-import static sorting.bubble_insertion_selection_1D.bubblesort;
+import static sorting.bubble_insertion_selection_cycle_1D.bubblesort;
 
 public static void main()
 {

@@ -1,6 +1,6 @@
 package sorting;
 import java.util.*;
-public class bubble_insertion_selection_1D
+public class bubble_insertion_selection_cycle_1D
 {
     public static void main()
 
@@ -27,8 +27,9 @@ public class bubble_insertion_selection_1D
         System.out.println("enter 1 for bubble sorting");
         System.out.println("enter 2 for selection sorting");
         System.out.println("enter 3 insertion sorting");
+        System.out.println("enter 4 for cyclic sort");
         choice = sc.nextInt();
-        if (choice == 1 || choice == 2 || choice == 3) {
+        if (choice == 1 || choice == 2 || choice == 3 || choice==4 ) {
             break;
         } else {
             System.out.println("invalid choice, choose again");
@@ -51,25 +52,26 @@ public class bubble_insertion_selection_1D
     {
         arr = bubblesort(arr,order);
         System.out.println("the sorted array is");
-        for (int j : arr) {
-            System.out.print(j + " ");
-        }
+        System.out.println(Arrays.toString(arr));
     }
     else if(choice==2)
 
     {
         arr = selectionsort(arr,order);
         System.out.println("the sorted array is");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
+        System.out.println(Arrays.toString(arr));
     }
-    else {
+    else if(choice==3)
+    {
         arr = insertionsort(arr,order);
         System.out.println("the sorted array is");
-        for (int j : arr) {
-            System.out.print(j + " ");
-        }
+        System.out.println(Arrays.toString(arr));
+    }
+    else
+    {
+        arr=cyclicsort(arr,order);
+        System.out.println("the sorted array is ");
+        System.out.println(Arrays.toString(arr));
     }
 }
 
@@ -180,5 +182,41 @@ public class bubble_insertion_selection_1D
             }
             return arr;
         }
+    }
+    public static int[] cyclicsort(int[] arr, int order)
+    {
+        if(order==1)
+        {
+            int i=0;
+            while(i<arr.length)
+            {
+                int correct=arr[i]-1;
+                if(arr[i]!=arr[correct])
+                {
+                    int temp=arr[i];
+                    arr[i]=arr[correct];
+                    arr[correct]=temp;
+                }
+                else
+                    i++;
+            }
+        }
+        else
+        {
+            int i=0;
+            while(i<arr.length)
+            {
+                int correct=arr.length-arr[i];
+                if(arr[i]!=arr[correct])
+                {
+                    int temp=arr[i];
+                    arr[i]=arr[correct];
+                    arr[correct]=temp;
+                }
+                else
+                    i++;
+            }
+        }
+        return arr;
     }
 }
