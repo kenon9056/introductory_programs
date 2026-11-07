@@ -24,7 +24,7 @@ public static void main()
     {
         System.out.println("number not found");
     }
-    else System.out.println("number found at: "+result);
+    else System.out.println("first occurrence of number found at: "+result);
 }
 public static int binarysearch(int[] arr,int value)
 {
