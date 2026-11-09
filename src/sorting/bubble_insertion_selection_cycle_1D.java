@@ -77,7 +77,7 @@ public class bubble_insertion_selection_cycle_1D
 
     public static int[] bubblesort(int[] arr, int order) //take the largest element and push  it to the end every time;
     {
-        int temp=0;
+        int temp;
         if(order==1)
         {
             for (int j = 0; j < arr.length - 1; j++)
@@ -190,6 +190,8 @@ public class bubble_insertion_selection_cycle_1D
             int i=0;
             while(i<arr.length)
             {
+                //because we are starting from 1 correct=arr[i]-1
+                // if starting element is 0 the correct=arr[i]
                 int correct=arr[i]-1;
                 if(arr[i]!=arr[correct])
                 {
