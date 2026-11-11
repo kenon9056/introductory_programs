@@ -5,11 +5,6 @@ public class patterns {
         Scanner sc=new Scanner(System.in);
         int row=sc.nextInt();
         pattern1(row);
-
-
-
-
-
     }
 
 
