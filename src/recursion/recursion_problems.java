@@ -14,6 +14,7 @@ public class recursion_problems {
 
       int numRev(int n)
     {
+        //reverses a number n;
         if(n==0)
         {
             return x;
@@ -24,6 +25,7 @@ public class recursion_problems {
     }
     boolean palin(int n)
     {
+        // checks if a number is palindrome or not;
         if(numRev(n)==n)
         {
             return true;
@@ -35,6 +37,7 @@ public class recursion_problems {
     }
     int no_zeros(int n)
     {
+        // returns the number of zeros found in a number;
         if(n>0)
         {
             if (n % 10 == 0)
@@ -54,9 +57,11 @@ public class recursion_problems {
     }
     int steps(int n)
     {
-        return helper_steps(n,0);
+        //leetcode problem number 1342(number of steps required to reduce a number of 0 by only performing
+        //division by 2(if number is even) or subtraction by 1 (is number is odd)
+        return steps_helper(n,0);
     }
-    int helper_steps(int n, int count)
+    int steps_helper(int n, int count)
     {
         if (n==0)
         {
@@ -64,14 +69,18 @@ public class recursion_problems {
         }
         else if(n%2==0)
         {
-            return helper_steps(n/2,++count);
+            return steps_helper(n/2,++count);
         }
         else
         {
-            return helper_steps(n-1,++count);
+            return steps_helper(n-1,++count);
         }
     }
-    boolean array_sortedAsc(int[] num) {return array_sortedAsc_helper(num, 0);}
+    boolean array_sortedAsc(int[] num)
+    {
+        //sorts an array in ascending order;
+        return array_sortedAsc_helper(num, 0);
+    }
     boolean array_sortedAsc_helper(int[] num, int i )
     {
         if(i==num.length-1)
