@@ -1,5 +1,4 @@
 package patterns;
-import java.util.Arrays;
 import java.util.Scanner;
 public class patterns {
     static void main(String[] args) {
