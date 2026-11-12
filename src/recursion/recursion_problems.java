@@ -10,6 +10,8 @@ public class recursion_problems {
           System.out.println(no_zeros(4508060));
           System.out.println(steps(14));
           System.out.println(array_sortedAsc(new int[]{1,2,4,4,6}));
+         System.out.println(majorityElement(new int[]{3,2,3}));
+         System.out.println(majorityelementusing_boyer_moore(new int[]{4,2,2,6,2,2}));
     }
 
       int numRev(int n)
@@ -95,5 +97,65 @@ public class recursion_problems {
         {
             return false;
         }
+    }
+
+     int majorityElement(int[] nums)
+    {
+        int ans=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            if(frequency(nums, nums[i], 0)>nums.length/2)
+            {
+                ans= nums[i];
+                break;
+            }
+
+        }
+        return ans;
+    }
+    int frequency(int[] nums, int number, int c)
+    {
+        return frequency_helper(nums, number, c, 0);
+    }
+    int frequency_helper(int[] nums, int number, int c, int i)
+    {
+        if(i<nums.length)
+        {
+            if(nums[i]==number)
+            {
+                return frequency_helper(nums, number, c+1, i+1);
+            }
+            else
+            {
+                return frequency_helper(nums, number, c, i+1);
+            }
+        }
+        else
+        {
+            return c;
+        }
+
+    }
+
+    int majorityelementusing_boyer_moore(int[] nums)
+    {
+        int count=0;
+        int candidate=0;
+        for(int n:nums)
+        {
+            if(count==0)
+            {
+                candidate=n;
+            }
+            if(n==candidate)
+            {
+                count++;
+            }
+            else
+            {
+                count--;
+            }
+        }
+        return candidate;
     }
 }
